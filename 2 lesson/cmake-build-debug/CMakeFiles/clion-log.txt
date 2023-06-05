@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S "/Users/mi/Documents/GitHub/spbu-homework-spring-2022/2 lesson" -B "/Users/mi/Documents/GitHub/spbu-homework-spring-2022/2 lesson/cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/mi/Documents/GitHub/spbu-homework-spring-2022/2 lesson/cmake-build-debug
