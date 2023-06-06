@@ -1,0 +1,3 @@
+/Users/mi/Documents/GitHub/spbu-homework-spring-2022/4 lesson/cmake-build-debug/CMakeFiles/4_lesson.dir
+/Users/mi/Documents/GitHub/spbu-homework-spring-2022/4 lesson/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mi/Documents/GitHub/spbu-homework-spring-2022/4 lesson/cmake-build-debug/CMakeFiles/rebuild_cache.dir
