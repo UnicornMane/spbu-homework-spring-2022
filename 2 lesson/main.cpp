@@ -94,11 +94,11 @@ chrono::duration<float> boss_of_task_creation(int preparators, int completors)
         }
     }
 
-    while (counter_of_completed_tasks < n)
-    {
-
-    }
-    chrono::time_point<std::chrono::high_resolution_clock> t2 = chrono::high_resolution_clock::now();
+//    while (counter_of_completed_tasks < n)
+//    {
+//
+//    }
+//
 
     for (auto & i : f1)
     {
@@ -108,5 +108,7 @@ chrono::duration<float> boss_of_task_creation(int preparators, int completors)
     {
         j.join();
     }
+    chrono::time_point<std::chrono::high_resolution_clock> t2 = chrono::high_resolution_clock::now();
     return t2 - t1;
 }
+

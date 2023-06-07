@@ -20,7 +20,8 @@ public:
 
     void operator() (Ts... args) requires (is_same_v<T, void>)
             {
-                    while(!mtx.try_lock()) {}
+                lock_guard<mutex> lock(mtx);
+//                    while(!mtx.try_lock()) {}
                     {int dummy[sizeof...(Ts)] = {(std::cout << args << "; ", 0)...};}
                     cout << endl;
                     f(args...);
@@ -30,11 +31,12 @@ public:
 
     T operator() (Ts... args)
     {
-        while(!mtx.try_lock()) {}
+        lock_guard<mutex> lock(mtx);
+        //while(!mtx.try_lock()) {}
         {int dummy[sizeof...(Ts)] = {(std::cout << args << "; ", 0)...};}
         cout << endl;
         cout << "thread's ID:\t" << this_thread::get_id() << endl;
-        mtx.unlock();
+        //mtx.unlock();
         return f(args...);
     }
 };

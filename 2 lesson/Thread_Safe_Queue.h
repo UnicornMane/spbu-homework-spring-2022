@@ -22,29 +22,28 @@ public:
         data_cond.notify_one();
     }
 
-    bool try_pop(T &value)
+    bool try_pop()
     {
         std::lock_guard<std::mutex> lk(mut);
         if (data_queue.empty())
         {
             return false;
         }
-        value = std::move(data_queue.front());
         data_queue.pop();
         return true;
     }
 
-    std::shared_ptr<T> try_pop()
-    {
-        std::lock_guard<std::mutex> lk(mut);
-        if (data_queue.empty())
-        {
-            return std::shared_ptr<T>();
-        }
-        std::shared_ptr<T> res{std::make_shared<T>(std::move(data_queue.front()))};
-        data_queue.pop();
-        return res;
-    }
+//    std::shared_ptr<T> try_pop()
+//    {
+//        std::lock_guard<std::mutex> lk(mut);
+//        if (data_queue.empty())
+//        {
+//            return std::shared_ptr<T>();
+//        }
+//        std::shared_ptr<T> res{std::make_shared<T>(std::move(data_queue.front()))};
+//        data_queue.pop();
+//        return res;
+//    }
 
     bool empty() const
     {
